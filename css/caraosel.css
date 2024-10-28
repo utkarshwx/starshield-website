@@ -1,0 +1,103 @@
+/* Style for the heading */
+.carousel-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #17224D;
+}
+
+/* Base styles for desktop and larger screens */
+.clcar {
+    width: 80%;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto 20px; /* Center the carousel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousellogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scroll 100s linear infinite; /* Smooth and continuous animation */
+}
+
+.carousel-item {
+    width: 200px; /* 1:1 ratio for logos */
+    height: 200px;
+    margin: 0 10px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain the aspect ratio of the logos */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .carousel-heading {
+        font-size: 1.8rem;
+    }
+
+    .clcar {
+        width: 95%;
+    }
+
+    .carousel-item {
+        width: 100px;
+        height: 100px;
+        margin: 0 5px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-heading {
+        font-size: 1.5rem;
+    }
+
+    .clcar {
+        width: 100%;
+    }
+
+    .carousel-item {
+        width: 70px;
+        height: 70px;
+        margin: 0 5px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
